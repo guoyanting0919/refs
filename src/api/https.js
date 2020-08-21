@@ -33,8 +33,9 @@ const errorHandle = (status, msg) => {
 };
 
 // 設定 baseURL
+let url = process.env.VUE_APP_BASE_URL;
 let instance = axios.create({
-  baseURL: "http://tccdonkeyapi.1966.org.tw/api/",
+  baseURL: url,
 });
 
 // request 攔截

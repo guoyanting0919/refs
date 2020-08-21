@@ -20,16 +20,16 @@ const routes = [
       NoNeedHome: false, // 表示不需要父層模板 false 時可省略
     },
   },
-  {
-    path: "/Login/:id",
-    name: "Login",
-    component: () => import("../views/Login.vue"),
-    meta: {
-      title: "登入頁",
-      requireAuth: false,
-      NoNeedHome: true,
-    },
-  },
+  // {
+  //   path: "/Login/:id",
+  //   name: "Login",
+  //   component: () => import("../views/Login.vue"),
+  //   meta: {
+  //     title: "登入頁",
+  //     requireAuth: false,
+  //     NoNeedHome: true,
+  //   },
+  // },
   {
     path: "/Err404",
     name: "Err404",
@@ -49,7 +49,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
   scrollBehavior(to, from, savedPosition) {
