@@ -20,6 +20,16 @@ const routes = [
       NoNeedHome: false, // 表示不需要父層模板 false 時可省略
     },
   },
+  {
+    path: "/HomeQR/:registerNo", //開頭大寫
+    name: "HomeQR", //開頭大寫
+    component: () => import("../views/Home.vue"),
+    meta: {
+      title: "NoPage", //中文為主 若為英文開頭大寫
+      requireAuth: false, //表示是否登入驗證 false 時可省略
+      NoNeedHome: false, // 表示不需要父層模板 false 時可省略
+    },
+  },
   // {
   //   path: "/Login/:id",
   //   name: "Login",
